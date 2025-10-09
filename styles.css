@@ -117,7 +117,7 @@ section {
 }
 
 .project img {
-  order: -1; /* przesuwa obrazek na górę */
+  order: -1; 
   margin-bottom: 1em;
 }
 
@@ -129,6 +129,7 @@ footer {
   padding: 1em;
   margin-top: 2em;
 }
+
 
 
 
