@@ -4,6 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: hsl(34, 74%, 74%);
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -122,3 +128,4 @@ footer {
   padding: 1em;
   margin-top: 2em;
 }
+
