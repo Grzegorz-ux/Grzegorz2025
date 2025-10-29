@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grzegorz</title>
+    <title>Min første side</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
@@ -100,8 +100,10 @@
             width="300"
           />
         </article>
+        
+        <div class="bouncing-ball"></div>
 
-        <article class="project">
+          <article class="project">
           <h3>JavaScript prosjekt</h3>
           <p>Prosjekt med JavaScript</p>
           <a href="https://bilservice.vercel.app/" target="_blank"
@@ -131,11 +133,28 @@
         </a>
       </div>
     </section>
+    <script>
+  const projects = document.querySelectorAll('.project');
 
-    <!-- STOP -->
-    <p style="text-align: center;">Takk for at du besøkte nettstedet mitt</p>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        if (index === 0) entry.target.classList.add('show-left');
+        if (index === 1) entry.target.classList.add('show-right');
+        if (index === 2) entry.target.classList.add('show-bottom');
+        if (index === 3) entry.target.classList.add('show-top');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  projects.forEach(project => observer.observe(project));
+</script>
+
+    <!-- STOP -->   
+    <footer>
+      <p style="text-align: center;">Takk for at du besøkte nettstedet mitt</p>
     <p style="text-align: center;">Grzegorz.M</p>
-
-    <footer></footer>
+    </footer>
   </body>
 </html>
+
