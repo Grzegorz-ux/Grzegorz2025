@@ -64,6 +64,13 @@ nav a:hover {
 /* Hero content with a gentle lift */
 .hero-content {
   animation: float-hero 5s ease-in-out infinite;
+  .hero-text h1 {
+  margin-bottom: 20px; 
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+
 }
 .ommeg-img {
   width: 200px;
@@ -218,4 +225,5 @@ footer {
   70%  { transform: translateY(-50px) scaleX(1.1) scaleY(0.9); }
   100% { transform: translateY(0) scaleX(1) scaleY(1); }
 }
+
 
