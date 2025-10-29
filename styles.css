@@ -1,4 +1,4 @@
-/* --- RESET --- */
+/* ===================== RESET ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   background: hsl(54, 85%, 68%);
 }
 
-/*--- HEADER ---*/
+/* ===================== HEADER ===================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -22,13 +22,13 @@ header {
   border-bottom: 3px solid hsl(49, 90%, 52%);
 }
 
-/* Logo with Animation */
+/* Logo z animacją pulsowania */
 .logo {
   width: 40px;
   animation: pulse-logo 2.5s ease-in-out infinite;
 }
 
-/* --- NAV --- */
+/* ===================== NAV ===================== */
 nav ul {
   display: flex;
   list-style: none;
@@ -48,7 +48,7 @@ nav a:hover {
   transform: scale(1.15);
 }
 
-/* ---HERO --- */
+/* ===================== HERO ===================== */
 #hero {
   height: 80vh;
   display: flex;
@@ -61,34 +61,22 @@ nav a:hover {
   padding: 2em;
 }
 
-/* Hero content with a gentle lift */
+/* Hero content z delikatnym unoszeniem */
 .hero-content {
   animation: float-hero 5s ease-in-out infinite;
   .hero-text h1 {
-  margin-bottom: 20px; 
+    margin-bottom: 20px; 
+  }
+  
+  .hero-text p {
+    margin-bottom: 30px; /* odstęp od przycisku */
+  }
+  
 }
 
-.hero-text p {
-  margin-bottom: 30px;
-
-}
-.ommeg-img {
-  width: 200px;
-  border-radius: 10px;
-  position: relative;
-  top: 30px;
-
-  transition: transform 1.5s ease-in-out; 
-}
-
-.ommeg-img:hover {
-  transform: rotate(360deg);
-}
-
-
-/* Botton */
+/* Przycisk */
 .btn {
-  margin-top: 1em;
+  margin-top: 5em;
   background: #333;
   color: white;
   padding: 0.6em 1.2em;
@@ -100,16 +88,16 @@ nav a:hover {
 
 .btn:hover {
   background-color: #764ba2;
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 
-/* --- Sections --- */
+/* ===================== SEKCJE ===================== */
 section {
   padding: 2em;
   text-align: center;
 }
 
-/* --- PROJECTS --- */
+/* ===================== PROJEKTY ===================== */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -127,13 +115,13 @@ section {
   flex-direction: column;
   align-items: center;
 
-  opacity: 0; 
+  opacity: 0; /* start dla animacji scroll */
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
 }
 
 .project:hover {
   transform: translateY(-8px);
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.20);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
   background: #b3e0ff; /* tło przy hover */
 }
 
@@ -153,7 +141,7 @@ section {
   text-decoration: underline;
 }
 
-/* --- FOOTER --- */
+/* ===================== FOOTER ===================== */
 footer {
   background: #222;
   color: white;
@@ -162,50 +150,106 @@ footer {
   margin-top: 2em;
 }
 
-/* --- KEYFRAMES --- */
+/* ===================== KEYFRAMES ===================== */
 
 /* Pulsowanie logo */
 @keyframes pulse-logo {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.10); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Floating hero */
 @keyframes float-hero {
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Slide-in projekty */
 @keyframes slide-in-left {
-  0% { opacity: 0; transform: translateX(-80px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slide-in-right {
-  0% { opacity: 0; transform: translateX(80px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slide-in-bottom {
-  0% { opacity: 0; transform: translateY(80px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slide-in-top {
-  0% { opacity: 0; transform: translateY(-80px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Po pojawieniu się na ekranie */
+.project.show-left {
+  animation: slide-in-left 1s ease forwards;
+}
+.project.show-right {
+  animation: slide-in-right 1s ease forwards;
+}
+.project.show-bottom {
+  animation: slide-in-bottom 1s ease forwards;
+}
+.project.show-top {
+  animation: slide-in-top 1s ease forwards;
+}
+
+/* Obrót zdjęcia w sekcji Om meg przy hover */
+.ommeg-img {
+  width: 200px; 
+  border-radius: 10px;
+  transition: transform 1.5s ease-in-out; /* płynna animacja */
+}
+
+.ommeg-img:hover {
+  transform: rotate(360deg); /* obrót 360 stopni */
 }
 
 
-.project.show-left   { animation: slide-in-left 1s ease forwards; }
-.project.show-right  { animation: slide-in-right 1s ease forwards; }
-.project.show-bottom { animation: slide-in-bottom 1s ease forwards; }
-.project.show-top    { animation: slide-in-top 1s ease forwards; }
-
-/* --- BONUS: Sprettball 3D --- */
+/* ===================== BONUS: Sprettball 3D ===================== */
 .bouncing-ball {
   width: 40px;
   height: 40px;
@@ -214,16 +258,24 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   animation: bounce 2s ease-in-out infinite;
 }
 
 @keyframes bounce {
-  0%   { transform: translateY(0) scaleX(1) scaleY(1); }
-  30%  { transform: translateY(-100px) scaleX(1.2) scaleY(0.8); }
-  50%  { transform: translateY(0) scaleX(1.1) scaleY(0.9); }
-  70%  { transform: translateY(-50px) scaleX(1.1) scaleY(0.9); }
-  100% { transform: translateY(0) scaleX(1) scaleY(1); }
+  0% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
+  30% {
+    transform: translateY(-100px) scaleX(1.2) scaleY(0.8);
+  }
+  50% {
+    transform: translateY(0) scaleX(1.1) scaleY(0.9);
+  }
+  70% {
+    transform: translateY(-50px) scaleX(1.1) scaleY(0.9);
+  }
+  100% {
+    transform: translateY(0) scaleX(1) scaleY(1);
+  }
 }
-
-
