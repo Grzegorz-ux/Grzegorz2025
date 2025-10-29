@@ -22,7 +22,7 @@ header {
   border-bottom: 3px solid hsl(49, 90%, 52%);
 }
 
-/* Logo z animacją pulsowania */
+/* Logo with pulsing animation */
 .logo {
   width: 40px;
   animation: pulse-logo 2.5s ease-in-out infinite;
@@ -69,7 +69,7 @@ nav a:hover {
   }
   
   .hero-text p {
-    margin-bottom: 30px; /* odstęp od przycisku */
+    margin-bottom: 30px; /* distance from the button */
   }
   
 }
@@ -91,13 +91,13 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* --- SEKCJE --- */
+/* --- SECTIONS --- */
 section {
   padding: 2em;
   text-align: center;
 }
 
-/* --- PROJEKTY --- */
+/* --- PROJECTS --- */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -241,11 +241,11 @@ footer {
 .ommeg-img {
   width: 200px; 
   border-radius: 10px;
-  transition: transform 1.5s ease-in-out; /* płynna animacja */
+  transition: transform 1.5s ease-in-out; /* smooth animation */
 }
 
 .ommeg-img:hover {
-  transform: rotate(360deg); /* obrót 360 stopni */
+  transform: rotate(360deg); /* 360-degree rotation */
 }
 
 
@@ -279,4 +279,5 @@ footer {
     transform: translateY(0) scaleX(1) scaleY(1);
   }
 }
+
 
