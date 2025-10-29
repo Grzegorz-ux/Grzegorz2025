@@ -1,4 +1,4 @@
-/* ===================== RESET ===================== */
+/* --- RESET --- */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   background: hsl(54, 85%, 68%);
 }
 
-/* ===================== HEADER ===================== */
+/* --- HEADER --- */
 header {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@ header {
   animation: pulse-logo 2.5s ease-in-out infinite;
 }
 
-/* ===================== NAV ===================== */
+/* --- NAV --- */
 nav ul {
   display: flex;
   list-style: none;
@@ -48,7 +48,7 @@ nav a:hover {
   transform: scale(1.15);
 }
 
-/* ===================== HERO ===================== */
+/* --- HERO --- */
 #hero {
   height: 80vh;
   display: flex;
@@ -61,7 +61,7 @@ nav a:hover {
   padding: 2em;
 }
 
-/* Hero content z delikatnym unoszeniem */
+/* Hero content with a gentle lift */
 .hero-content {
   animation: float-hero 5s ease-in-out infinite;
   .hero-text h1 {
@@ -74,7 +74,7 @@ nav a:hover {
   
 }
 
-/* Przycisk */
+/* Botton */
 .btn {
   margin-top: 5em;
   background: #333;
@@ -91,13 +91,13 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* ===================== SEKCJE ===================== */
+/* --- SEKCJE --- */
 section {
   padding: 2em;
   text-align: center;
 }
 
-/* ===================== PROJEKTY ===================== */
+/* --- PROJEKTY --- */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -110,19 +110,19 @@ section {
   border: 1px solid rgb(17, 16, 16);
   border-radius: 10px;
   padding: 1em;
-  background: #cce7ff; /* tło projektów */
+  background: #cce7ff; /* background designs */
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  opacity: 0; /* start dla animacji scroll */
+  opacity: 0; /* start for scroll animation */
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.3s ease;
 }
 
 .project:hover {
   transform: translateY(-8px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-  background: #b3e0ff; /* tło przy hover */
+  background: #b3e0ff; /* background at hover */
 }
 
 .project img {
@@ -141,7 +141,7 @@ section {
   text-decoration: underline;
 }
 
-/* ===================== FOOTER ===================== */
+/* --- FOOTER --- */
 footer {
   background: #222;
   color: white;
@@ -150,9 +150,9 @@ footer {
   margin-top: 2em;
 }
 
-/* ===================== KEYFRAMES ===================== */
+/* --- KEYFRAMES --- */
 
-/* Pulsowanie logo */
+/* Logo pulsing */
 @keyframes pulse-logo {
   0% {
     transform: scale(1);
@@ -178,7 +178,7 @@ footer {
   }
 }
 
-/* Slide-in projekty */
+/* Slide-in projects */
 @keyframes slide-in-left {
   0% {
     opacity: 0;
@@ -223,7 +223,7 @@ footer {
   }
 }
 
-/* Po pojawieniu się na ekranie */
+/* After appearing on the screen */
 .project.show-left {
   animation: slide-in-left 1s ease forwards;
 }
@@ -237,7 +237,7 @@ footer {
   animation: slide-in-top 1s ease forwards;
 }
 
-/* Obrót zdjęcia w sekcji Om meg przy hover */
+/* Rotate the photo in the Om meg section at hover */
 .ommeg-img {
   width: 200px; 
   border-radius: 10px;
@@ -249,7 +249,7 @@ footer {
 }
 
 
-/* ===================== BONUS: Sprettball 3D ===================== */
+/* --- BONUS: Sprettball 3D --- */
 .bouncing-ball {
   width: 40px;
   height: 40px;
@@ -279,3 +279,4 @@ footer {
     transform: translateY(0) scaleX(1) scaleY(1);
   }
 }
+
