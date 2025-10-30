@@ -282,26 +282,26 @@ footer {
 .typing-text {
   font-family: monospace;
   font-size: 1.5em;
-  white-space: nowrap;         /* tekst w jednej linii */
-  overflow: hidden;            /* ukrywa litery na początku */
-  border-right: 3px solid white; /* kursor */
-  display: inline-block;       /* potrzebne do animacji szerokości */
+  white-space: nowrap;         /* text in one line */
+  overflow: hidden;            /* hides letters at the beginning */
+  border-right: 3px solid white; /* cursor */
+  display: inline-block;       /* needed for width animation */
   animation: typing 4s steps(20, end) forwards, blink 0.75s step-end infinite;
-  text-align: center;          /* wyśrodkowanie */
+  text-align: center;          /* centering */
 }
 
-/* animacja pisania */
+/* writing animation */
 @keyframes typing {
   from { width: 0; }
   to   { width: 100%; }
 }
 
-/* migający kursor */
+/* flashing cursor */
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-/* aby kontener był wyśrodkowany */
+/* so that the container is centered */
 #hero {
   display: flex;
   flex-direction: column;
@@ -310,6 +310,7 @@ footer {
   text-align: center;
   padding: 2em;
 }
+
 
 
 
